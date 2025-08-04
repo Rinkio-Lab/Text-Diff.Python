@@ -67,4 +67,4 @@ uv add py_mini_racer questionary rich
 
 ## 📜 许可证
 
-本项目使用 MIT License。
+本项目使用 [MIT License](LICENSE)。

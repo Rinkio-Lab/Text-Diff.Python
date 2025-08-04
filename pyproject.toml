@@ -1,7 +1,7 @@
 [project]
 name = "textdiff-python"
 version = "0.1.0"
-description = "Add your description here"
+description = "A lightweight command-line text difference comparison tool based on diff.js + Python + py_mini_racer."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
