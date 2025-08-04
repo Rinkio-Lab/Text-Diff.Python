@@ -1,0 +1,161 @@
+@font-face {
+    font-family: "SarasaGothicSC";
+    src: url("./assets/fonts/SarasaGothicSC-Regular.ttf");
+}
+
+@font-face {
+    font-family: "SarasaGothicJ";
+    src: url("./assets/fonts/SarasaGothicJ-Regular.ttf");
+}
+
+/* 通用重置与基础布局 */
+*,
+:root,
+html {
+    font-family: "SarasaGothicSC",
+        "SarasaGothicJ",
+        "Microsoft YaHei",
+        "PingFang SC",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+textarea,
+#diffResult {
+    font-family: "SarasaGothicJ",
+        "Microsoft YaHei",
+        "PingFang SC",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    font-family: "SarasaGothicSC", "Microsoft YaHei", sans-serif;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+
+.text-area-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+textarea {
+    flex: 1;
+    height: 220px;
+    padding: 1rem;
+    border: 1px solid #dcdfe6;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#runDiffBtn {
+    padding: 0.6rem 1.4rem;
+    background-color: #409eff;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#runDiffBtn:hover {
+    background-color: #337ecc;
+}
+
+#diffType {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #5cb85c;
+    font-weight: bold;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    z-index: 999;
+}
+
+.message.warning {
+    background-color: #f0ad4e;
+}
+
+.message.error {
+    background-color: #d9534f;
+}
+
+.message.info {
+    background-color: #5bc0de;
+}
+
+/* 输出区域样式 */
+.diff-output {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    display: none;
+}
+
+/* 高亮：新增文本 */
+.added {
+    background-color: #d4fcd4;
+    /* 更亮眼的绿色背景 */
+    color: #2e7d32;
+    /* 深绿色字体 */
+    padding: 0.1rem 0.3rem;
+    margin: 0 0.1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #81c784;
+}
+
+/* 高亮：删除文本 */
+.removed {
+    background-color: #ffe1e1;
+    /* 更柔和的红色背景 */
+    color: #c62828;
+    /* 深红色字体 */
+    padding: 0.1rem 0.3rem;
+    margin: 0 0.1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: line-through;
+    border: 1px solid #ef9a9a;
+}

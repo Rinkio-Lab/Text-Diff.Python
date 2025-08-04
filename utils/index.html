@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>文本差异对比</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h2>文本差异对比工具</h2>
+
+        <div class="text-area-group">
+            <textarea id="text1" placeholder="输入原始文本..."></textarea>
+            <textarea id="text2" placeholder="输入对比文本..."></textarea>
+        </div>
+
+        <div class="controls">
+            <select id="diffType">
+                <option value="diffWords">按词对比</option>
+                <option value="diffChars">按字符对比</option>
+                <option value="diffLines">按行对比</option>
+            </select>
+            <button id="runDiffBtn">对比文本</button>
+        </div>
+
+        <div id="message" class="message"></div>
+        <div class="diff-output" id="diffResult"></div>
+    </div>
+
+    <script type="module" src="./assets/js/diff.min.js" defer></script>
+    <script type="module" src="./assets/js/main.js" defer></script>
+</body>
+
+</html>

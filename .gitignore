@@ -1,0 +1,36 @@
+# Python 缓存文件
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 临时文件
+*.tmp
+text1.tmp
+text2.tmp
+
+# 虚拟环境（如果你用 virtualenv 或 venv）
+venv/
+env/
+.venv/
+
+# IDE/编辑器配置文件
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 日志文件
+*.log
+skipped.log
+
+# py_mini_racer 可能生成的缓存（如果有）
+*.cache
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# 打包生成目录
+build/
+dist/
+*.egg-info/

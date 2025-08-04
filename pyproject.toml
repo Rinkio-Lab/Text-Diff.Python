@@ -1,0 +1,11 @@
+[project]
+name = "textdiff-python"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "py-mini-racer>=0.6.0",
+    "questionary>=2.1.0",
+    "rich>=14.1.0",
+]
